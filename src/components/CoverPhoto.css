@@ -3,23 +3,60 @@
   position: relative;
 }
 
+.confirm-change {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-cancel {
+  background-color: rgba(114, 114, 114, 0.6);
+  color: white;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px 30px 10px 30px;
+}
+
+.btn-cancel:hover {
+  background-color: rgba(114, 114, 114);
+}
+
+.btn-save {
+  background-color: rgba(55, 168, 102);
+  height: 35px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+  padding: 10px 30px 10px 30px;
+}
+
+.btn-save:hover {
+  background-color: rgb(44, 134, 81);
+}
+
 .cover-image {
   object-fit: cover;
   width: 100%;
   height: 100%; /* Chiều cao cố định, có thể thay đổi */
   object-fit: cover; /* Đảm bảo ảnh không méo, cắt phần thừa */
-  border-radius: 10px; /* Bo góc */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
   display: block; /* Loại bỏ khoảng trắng dưới ảnh */
 }
 
 .edit-button {
-  align-items: center;
   display: flex;
   position: absolute;
   bottom: 5px;
   right: 10px;
-  padding: 5px 10px;
+  padding: 5px 8px;
   background-color: #ffffff;
   color: rgb(0, 0, 0);
   border: none;
@@ -38,13 +75,14 @@
 }
 
 .change-image-icon {
-  width: 14px;
-  height: 14px;
-  margin-right: 5px;
-  padding-bottom: 2px;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
 }
 
-/* Popup (modal) */
+.vitri-popup {
+  position: relative;
+}
 
 /* Animation cho popup */
 @keyframes fadeIn {
@@ -65,16 +103,16 @@
   }
 
   .edit-button {
-    padding: 10px; /* Giảm padding để nút nhỏ hơn */
+    padding: 5px;
     background-color: rgba(253, 253, 253, 0.8); /* Nửa trong suốt */
     border-radius: 50%; /* Hình tròn */
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
+    bottom: 5px;
+    right: 5px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    bottom: 10px;
-    right: 10px;
+    justify-content: center;
   }
 
   .edit-button-text {
@@ -82,10 +120,9 @@
   }
 
   .change-image-icon {
-    display: block; /* Hiện icon trên mobile */
-    width: 14px;
-    height: 14px;
+    /* Hiện icon trên mobile */
     margin-right: 0px;
-    padding-bottom: 0px;
+    width: 16px;
+    height: 16px;
   }
 }

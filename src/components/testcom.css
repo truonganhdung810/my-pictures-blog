@@ -1,0 +1,23 @@
+.camera-button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  /* Optional effects */
+  transition: background-color 0.2s ease;
+}
+
+.camera-button:hover {
+  background-color: #ddd;
+}
+
+.camera-icon {
+  font-size: 1.2rem;
+  color: #333;
+}
