@@ -4,6 +4,7 @@
 }
 
 .confirm-change {
+  z-index: 9999;
   width: 100%;
   height: 50px;
   position: absolute;
@@ -15,7 +16,7 @@
 }
 
 .btn-cancel {
-  background-color: rgba(114, 114, 114, 0.6);
+  background-color: rgb(33, 33, 33, 0.8);
   color: white;
   height: 35px;
   border: none;
@@ -25,11 +26,11 @@
 }
 
 .btn-cancel:hover {
-  background-color: rgba(114, 114, 114);
+  background-color: #222;
 }
 
 .btn-save {
-  background-color: rgba(55, 168, 102);
+  background-color: rgb(55, 168, 102);
   height: 35px;
   color: white;
   border: none;
@@ -43,10 +44,25 @@
   background-color: rgb(44, 134, 81);
 }
 
+.img-cover-container {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #ccc;
+  user-select: none;
+  cursor: grab;
+}
+
+.img-cover-container.dragging {
+  cursor: grabbing;
+}
+
 .cover-image {
   object-fit: cover;
   width: 100%;
-  height: 100%; /* Chiều cao cố định, có thể thay đổi */
+  /*height: 500px; /* ảnh lớn hơn khung */
+  pointer-events: none;
   object-fit: cover; /* Đảm bảo ảnh không méo, cắt phần thừa */
   display: block; /* Loại bỏ khoảng trắng dưới ảnh */
 }
@@ -100,6 +116,10 @@
 @media (max-width: 768px) {
   .cover-container {
     height: 200px; /* Giảm chiều cao trên mobile */
+  }
+
+  .img-cover-container {
+    height: 200px;
   }
 
   .edit-button {
